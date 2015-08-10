@@ -1,4 +1,4 @@
-// require("./css/style.css")
+require("./css/style.css")
 const React = require('react')
 const App   = require ('./src/app.jsx')
 
