@@ -2,17 +2,18 @@
   "name": "otiril",
   "version": "0.0.1",
   "description": "fun with things and stuff",
-  "main": "index.js",
-  "engines": {
-    "node": "0.11.x"
-  },
+  "author": "Andrew Zures",
+  "license": "ISC",
+  "main": "entry.js",
   "scripts": {
     "test": "jest"
   },
-  "author": "Andrew Zures",
-  "license": "ISC",
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "devDependencies": {
     "babel": "^5.8.21",
+    "babel-jest": "^5.3.0",
     "babel-loader": "^5.3.2",
     "css-loader": "^0.15.6",
     "flux": "^2.0.3",
