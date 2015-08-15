@@ -1,7 +1,7 @@
 const _ = require('ramda');
 const React = require('react');
 const PropTypes = React.PropTypes
-const Square = require('./square.jsx');
+const BoardSquare = require('./boardSquare.jsx');
 const Knight = require('./knight.jsx');
 const Game = require('./game.jsx');
 const DragDropContext = require('react-dnd').DragDropContext;
@@ -16,7 +16,7 @@ class Board extends React.Component {
   }
 
   squareStyle(){
-    return { width: '100%', height: '100', display: 'flex', flexWrap: 'wrap' }
+    return { width: '100%', height: '400px', display: 'flex', flexWrap: 'wrap' }
   }
 
   buildSquares(numSquares){
@@ -25,35 +25,15 @@ class Board extends React.Component {
 
   renderSquare(i) {
     const squarePosition = this.findSquarePosition(i);
-    const black = this.findSquareColor(squarePosition)
     const piece = this.findPiece(squarePosition, Game.knightPosition, <Knight />)
 
     return (
       <div key={i}
            style={{ width: '12.5%', height: '12.5%' }}
            onClick={() => this.handleSquareClick(squarePosition)}>
-        <Square black={black}> {piece} </Square>
+        <BoardSquare position={ squarePosition }> {piece} </BoardSquare>
       </div>
     );
-  }
-
-  handleSquareClick(position) {
-    if(this.canMoveKnight(position, Game)){ Game.moveKnight(position); }
-  }
-
-  canMoveKnight(position, Game) {
-    const [px, py] = position
-    const [x, y] = Game.knightPosition;
-    const dx = px - x;
-    const dy = py - y;
-
-    return (Math.abs(dx) === 2 && Math.abs(dy) === 1) ||
-           (Math.abs(dx) === 1 && Math.abs(dy) === 2);
-  }
-
-  findSquareColor(squarePosition){
-    const [x,y] = squarePosition
-    return (x + y) % 2 === 1
   }
 
   findSquarePosition(i){
