@@ -4,6 +4,8 @@ const PropTypes = React.PropTypes
 const Square = require('./square.jsx');
 const Knight = require('./knight.jsx');
 const Game = require('./game.jsx');
+const DragDropContext = require('react-dnd').DragDropContext;
+const HTML5Backend = require('react-dnd/modules/backends/HTML5');
 
 class Board extends React.Component {
 
@@ -72,4 +74,4 @@ class Board extends React.Component {
 //   knightPosition: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired
 // };
 
-module.exports = Board
+module.exports = DragDropContext(HTML5Backend)(Board)
