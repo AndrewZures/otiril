@@ -3,6 +3,7 @@ const React = require('react');
 const PropTypes = React.PropTypes
 const Square = require('./square.jsx');
 const Knight = require('./knight.jsx');
+const Game = require('./game.jsx');
 
 class Board extends React.Component {
 
@@ -23,13 +24,29 @@ class Board extends React.Component {
   renderSquare(i) {
     const squarePosition = this.findSquarePosition(i);
     const black = this.findSquareColor(squarePosition)
-    const piece = this.findPiece(squarePosition, this.props.knightPosition, <Knight />)
+    const piece = this.findPiece(squarePosition, Game.knightPosition, <Knight />)
 
     return (
-      <div key={i} style={{ width: '12.5%', height: '12.5%' }}>
+      <div key={i}
+           style={{ width: '12.5%', height: '12.5%' }}
+           onClick={() => this.handleSquareClick(squarePosition)}>
         <Square black={black}> {piece} </Square>
       </div>
     );
+  }
+
+  handleSquareClick(position) {
+    if(this.canMoveKnight(position, Game)){ Game.moveKnight(position); }
+  }
+
+  canMoveKnight(position, Game) {
+    const [px, py] = position
+    const [x, y] = Game.knightPosition;
+    const dx = px - x;
+    const dy = py - y;
+
+    return (Math.abs(dx) === 2 && Math.abs(dy) === 1) ||
+           (Math.abs(dx) === 1 && Math.abs(dy) === 2);
   }
 
   findSquareColor(squarePosition){
@@ -51,8 +68,8 @@ class Board extends React.Component {
 
 }
 
-Board.propTypes = {
-  knightPosition: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired
-};
+// Board.propTypes = {
+//   knightPosition: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired
+// };
 
 module.exports = Board
