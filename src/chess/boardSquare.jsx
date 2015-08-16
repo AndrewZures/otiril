@@ -22,15 +22,14 @@ function collect(connect, monitor) {
   }
 }
 
-class BoardSquare extends React.Component {
+class DroppableSquare extends React.Component {
 
   render() {
     const { position, connectDropTarget, isOver, canDrop } = this.props;
-    const black = this.findSquareColor(position)
 
     return connectDropTarget(
       <div style={{ position: 'relative' }}>
-        <Square black={black}>
+        <Square position={position} >
           {this.props.children}
         </Square>
         { isOver && !canDrop && this.renderOverlay('red') }
@@ -55,11 +54,7 @@ class BoardSquare extends React.Component {
     );
   }
 
-  findSquareColor(squarePosition){
-    const [x,y] = squarePosition
-    return (x + y) % 2 === 1
-  }
 }
 
 
-module.exports = DropTarget(ItemTypes.KNIGHT, squareTarget, collect)(BoardSquare);
+module.exports = DropTarget(ItemTypes.KNIGHT, squareTarget, collect)(DroppableSquare);

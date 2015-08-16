@@ -1,7 +1,7 @@
 const _ = require('ramda');
 const React = require('react');
 const PropTypes = React.PropTypes
-const BoardSquare = require('./boardSquare.jsx');
+const DroppableSquare = require('./boardSquare.jsx');
 const Knight = require('./knight.jsx');
 const Game = require('./game.jsx');
 const DragDropContext = require('react-dnd').DragDropContext;
@@ -28,10 +28,8 @@ class Board extends React.Component {
     const piece = this.findPiece(squarePosition, Game.knightPosition, <Knight />)
 
     return (
-      <div key={i}
-           style={{ width: '12.5%', height: '12.5%' }}
-           onClick={() => this.handleSquareClick(squarePosition)}>
-        <BoardSquare position={ squarePosition }> {piece} </BoardSquare>
+      <div key={i} style={{ width: '12.5%', height: '12.5%' }} >
+        <DroppableSquare position={ squarePosition }> {piece} </DroppableSquare>
       </div>
     );
   }
@@ -49,9 +47,5 @@ class Board extends React.Component {
   }
 
 }
-
-// Board.propTypes = {
-//   knightPosition: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired
-// };
 
 module.exports = DragDropContext(HTML5Backend)(Board)

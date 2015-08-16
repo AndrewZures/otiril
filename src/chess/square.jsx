@@ -3,7 +3,8 @@ const React = require('react');
 class Square extends React.Component {
 
   render(){
-    const { black } = this.props
+    const { position } = this.props
+    const black = this.isBlackSquare(position);
     const fill = black ? 'black' : 'white'
     const stroke = black ? 'white' : 'black'
 
@@ -14,6 +15,11 @@ class Square extends React.Component {
 
   style(fill, stroke){
     return { backgroundColor: fill, color: stroke, width: '100%', height: '100%' }
+  }
+
+  isBlackSquare(squarePosition){
+    const [x,y] = squarePosition
+    return (x + y) % 2 === 1
   }
 
 }

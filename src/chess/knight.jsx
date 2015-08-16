@@ -1,6 +1,6 @@
 const React = require('react');
 const DragSource = require('react-dnd').DragSource
-const Constants = require('./constants.js')
+const ItemTypes = require('./constants.js').ItemTypes
 
 const knightSource = {
   beginDrag(props) {
@@ -32,4 +32,4 @@ class Knight extends React.Component {
   }
 }
 
-module.exports = DragSource(Constants.ItemTypes.KNIGHT, knightSource, collect)(Knight);
+module.exports = DragSource(ItemTypes.KNIGHT, knightSource, collect)(Knight);
