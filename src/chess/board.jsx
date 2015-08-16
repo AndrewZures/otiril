@@ -9,6 +9,11 @@ const HTML5Backend = require('react-dnd/modules/backends/HTML5');
 
 class Board extends React.Component {
 
+  constructor(props){
+    super(props)
+    Game.observe(() => this.forceUpdate());
+  }
+
   render(){
     const squares = this.buildSquares(64);
 
@@ -29,7 +34,7 @@ class Board extends React.Component {
 
     return (
       <div key={i} style={{ width: '12.5%', height: '12.5%' }} >
-        <DroppableSquare position={ squarePosition }> {piece} </DroppableSquare>
+        <DroppableSquare position={ squarePosition } props={ this.props }> {piece} </DroppableSquare>
       </div>
     );
   }

@@ -1,9 +1,10 @@
 const React = require('react');
+const ChessApp = require('./chess/chessApp.jsx');
 
 class App extends React.Component {
 
   render() {
-    return <div>Hello There</div>
+    return <div><ChessApp /></div>
   }
 }
 
