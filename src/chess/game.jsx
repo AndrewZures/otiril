@@ -8,9 +8,12 @@ const Game = {
   },
 
   observe(o) {
-    if(this.observer) { throw new Error("too many observers"); }
+    // if(this.observer) { throw new Error("too many observers"); }
+    // this sort of doesn't work - AJZ
 
-    this.observer = o;
+    if (!this.observer){
+      this.observer = o;
+    }
     this.emitChange();
   },
 
