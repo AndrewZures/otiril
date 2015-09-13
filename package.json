@@ -25,14 +25,15 @@
     "flux": "^2.0.3",
     "jest": "^0.1.40",
     "jest-cli": "^0.4.18",
+    "lodash": "^3.10.1",
     "ramda": "^0.17.1",
     "react": "^0.13.3",
+    "react-dnd": "^1.1.4",
+    "react-redux": "^0.9.0",
     "react-router": "^0.13.3",
     "redux": "^1.0.1",
     "redux-devtools": "^1.0.2",
     "style-loader": "^0.12.3",
-    "webpack": "^1.11.0",
-    "react-dnd": "^1.1.4",
-    "react-redux": "^0.9.0"
+    "webpack": "^1.11.0"
   }
 }

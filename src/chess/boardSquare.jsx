@@ -56,5 +56,4 @@ class DroppableSquare extends React.Component {
 
 }
 
-
 module.exports = DropTarget(ItemTypes.KNIGHT, squareTarget, collect)(DroppableSquare);

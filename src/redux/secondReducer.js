@@ -1,4 +1,3 @@
-const Redux = require('redux');
 const ActionTypes = require('./actionTypes.js')
 
 function secondReducer(state = "", action){

@@ -9,7 +9,8 @@ class App extends React.Component {
       <div>
         <ul>
           <li><Link to="chess">Chess Game</Link></li>
-          <li><Link to="todo">To Do</Link></li>
+          <li><Link to="redux">Redux Stuff</Link></li>
+          <li><Link to="todo">Todo</Link></li>
         </ul>
         <RouteHandler />
       </div>
