@@ -3,8 +3,8 @@ const DragSource = require('react-dnd').DragSource
 const Card = require('./card.jsx');
 
 const cardSource = {
-  beginDrag(props) {
-    return {};
+  beginDrag(props){
+    return props;
   }
 }
 
@@ -15,8 +15,7 @@ function collect(connect, monitor) {
   };
 }
 
-class DroppableCard extends React.Component {
-
+class DraggableCard extends React.Component {
 
   render() {
     const { connectDragSource } = this.props;
@@ -27,4 +26,4 @@ class DroppableCard extends React.Component {
   }
 }
 
-module.exports = DragSource('hi', cardSource, collect)(DroppableCard);
+module.exports = DragSource('hi', cardSource, collect)(DraggableCard);

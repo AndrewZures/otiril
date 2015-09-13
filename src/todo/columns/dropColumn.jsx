@@ -19,7 +19,6 @@ function collect(connect, monitor) {
 class DropColumn extends React.Component {
 
   render() {
-    console.log(this.props)
     const { connectDropTarget } = this.props
 
     return connectDropTarget(
