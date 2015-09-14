@@ -12,7 +12,11 @@ class Board extends React.Component {
 
   render() {
     return (
-      <DropColumn cards={this.state.cards} />
+      <div>
+        <DropColumn cards={this.state.cards} />
+        <DropColumn cards={[]} />
+        <DropColumn cards={[]} />
+      </div>
     )
   }
 }

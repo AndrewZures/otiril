@@ -6,7 +6,7 @@ class Column extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="column">
         { _.map((card) => <DraggableCard key={card.id} {...card} />, this.props.cards) }
       </div>
     )

@@ -3,16 +3,14 @@ const DropTarget = require('react-dnd').DropTarget
 const Column = require('./column.jsx');
 
 const columnTarget = {
-  canDrop(props) {
-  },
-
-  drop(props, monitor) {
-  }
+  drop(props, monitor) { }
 }
 
 function collect(connect, monitor) {
   return {
-    connectDropTarget: connect.dropTarget()
+    connectDropTarget: connect.dropTarget(),
+    canDrop: monitor.canDrop(),
+    isOver: monitor.isOver()
   }
 }
 
@@ -22,8 +20,21 @@ class DropColumn extends React.Component {
     const { connectDropTarget } = this.props
 
     return connectDropTarget(
-      <div><Column cards={this.props.cards} /></div>
+      <div className={ this.getStyle() }>
+        <Column cards={ this.props.cards } />
+      </div>
     )
+  }
+
+  getStyle(){
+    const { canDrop, isOver } = this.props
+    if(canDrop && isOver){
+      return "active-drop"
+    } else if(canDrop) {
+      return "can-drop";
+    } else {
+      return ""
+    }
   }
 }
 

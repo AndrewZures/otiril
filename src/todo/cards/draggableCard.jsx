@@ -3,9 +3,7 @@ const DragSource = require('react-dnd').DragSource
 const Card = require('./card.jsx');
 
 const cardSource = {
-  beginDrag(props){
-    return props;
-  }
+  beginDrag(){ return {} }
 }
 
 function collect(connect, monitor) {
@@ -21,8 +19,14 @@ class DraggableCard extends React.Component {
     const { connectDragSource } = this.props;
 
     return connectDragSource(
-      <Card {...this.props} />
+      <div className={ this.getStyle() }>
+        <Card {...this.props} />
+      </div>
     )
+  }
+
+  getStyle(props) {
+    return this.props.isDragging ? "card-drag" : ""
   }
 }
 

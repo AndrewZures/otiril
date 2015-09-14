@@ -5,3 +5,28 @@ body {
 #app {
   height: 400px;
 }
+
+.card {
+  height: 50px;
+  width: 50px;
+  border-style: dotted;
+  border-width: 1px;
+}
+
+.card-drag {
+  opacity: 0.2;
+}
+
+.active-drop {
+  background: blue;
+}
+
+.can-drop {
+  background: white;
+}
+
+.column {
+  height: 120px;
+  width: 60px;
+  margin: 10px;
+}
