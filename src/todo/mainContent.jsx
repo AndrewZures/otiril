@@ -10,7 +10,7 @@ class MainContent extends React.Component {
   render() {
     return (
       <div>
-        <Board />
+        <Board {...this.props.board} />
       </div>
     )
   }

@@ -3,7 +3,7 @@ const DragSource = require('react-dnd').DragSource
 const Card = require('./card.jsx');
 
 const cardSource = {
-  beginDrag(){ return {} }
+  beginDrag(props){ return props }
 }
 
 function collect(connect, monitor) {

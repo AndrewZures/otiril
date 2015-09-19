@@ -1,9 +1,15 @@
 const React = require('react');
+const store = require('../store/store.js');
 const DropTarget = require('react-dnd').DropTarget
 const Column = require('./column.jsx');
 
 const columnTarget = {
-  drop(props, monitor) { }
+  drop(props, monitor) {
+    console.log('column data');
+    console.log(props);
+    console.log('card data');
+    console.log(monitor.getItem());
+  }
 }
 
 function collect(connect, monitor) {
