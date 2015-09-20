@@ -7,12 +7,17 @@ class TodoApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = Store.getState();
+    this.subscribe();
   }
 
   render() {
     return (
       <MainContent {...this.state} />
     )
+  }
+
+  subscribe(){
+    Store.subscribe(() => this.setState(Store.getState()))
   }
 }
 
