@@ -16,8 +16,8 @@ body {
 }
 
 .card {
-  font-size: 10pt;
-  font-color: white;
+  font-size: 12pt;
+  font-family: sans-serif;
   border-style: solid;
   border-width: 1px;
   background: #BBBCCC;
@@ -48,5 +48,15 @@ body {
   flex-grow: 2;
   min-width: 30%;
   min-height: 100%;
+}
+
+.newCardInput {
+  font-size: 16pt;
+  margin: 1%;
+}
+
+.newCardSubmit {
+  font-size: 16pt;
+  margin: 1%;
 }
 

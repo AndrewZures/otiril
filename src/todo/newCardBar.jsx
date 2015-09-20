@@ -27,11 +27,12 @@ class NewCardBar extends React.Component {
         <div>
           <input
             type="text"
+            className="newCardInput"
             value={this.state.currentTitle}
             placeholder={this.props.defaultText.title}
             onChange={this.handleTitleChange.bind(this)}
           />
-          <button type="submit">Submit</button>
+          <button type="submit" className="newCardSubmit">Submit</button>
         </div>
       </form>
     )
