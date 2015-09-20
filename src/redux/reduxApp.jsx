@@ -7,7 +7,11 @@ class ReduxApp extends React.Component {
   constructor(props){
     super(props);
     this.state = Store.getState()
-    this.subscribe()
+  }
+
+  componentDidMount() {
+    Store.subscribe(() => this.setState(Store.getState()))
+    Store.subscribe(() => console.log(Store.getState()))
   }
 
   render(){
@@ -39,11 +43,6 @@ class ReduxApp extends React.Component {
 
   decrement() {
     Store.dispatch({ type: ActionTypes.Todo.decrement })
-  }
-
-  subscribe(){
-    Store.subscribe(() => this.setState(Store.getState()))
-    Store.subscribe(() => console.log(Store.getState()))
   }
 
 }

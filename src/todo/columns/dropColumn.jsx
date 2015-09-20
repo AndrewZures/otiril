@@ -33,11 +33,11 @@ class DropColumn extends React.Component {
   getStyle(){
     const { canDrop, isOver } = this.props
     if(canDrop && isOver){
-      return "active-drop"
+      return "column active-drop"
     } else if(canDrop) {
-      return "can-drop";
+      return "column can-drop";
     } else {
-      return ""
+      return "column"
     }
   }
 }

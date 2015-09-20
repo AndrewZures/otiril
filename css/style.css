@@ -1,33 +1,52 @@
 body {
-  background: gray;
+  background: #4E537F;
 }
 
 #app {
   height: 400px;
 }
 
+.board {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+  height: 600px;
+  align-items: stretch;
+  flex-direction: row;
+}
+
 .card {
   font-size: 10pt;
-  height: 50px;
-  width: 120px;
-  border-style: dotted;
+  font-color: white;
+  border-style: solid;
   border-width: 1px;
+  background: #BBBCCC;
+  min-height: 10%;
+  box-shadow: 1px 1px 1px black;
 }
 
 .card-drag {
   opacity: 0.2;
 }
 
-.active-drop {
-  background: blue;
+.active-drop .column {
+  background: #E9EBFF;
 }
 
-.can-drop {
-  background: white;
+.can-drop .column {
+  background: #9DA6FF;
 }
 
 .column {
-  height: 120px;
-  width: 400px;
   margin: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFEAE1;
+  box-shadow: 3px 3px 3px black;
+  background: #75767F;
+  flex-direction: column;
+  flex-grow: 2;
+  min-width: 30%;
+  min-height: 100%;
 }
+

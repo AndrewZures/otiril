@@ -8,7 +8,7 @@ class Board extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="board">
         { _.map((column) => <DropColumn {...column } key={column.id} />, this.props.columns) }
       </div>
     )

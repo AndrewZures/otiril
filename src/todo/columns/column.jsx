@@ -8,7 +8,7 @@ class Column extends React.Component {
     const cards = this.props.cards || []
 
     return (
-      <div className="column">
+      <div>
         { _.map((card) => <DraggableCard key={card.id} {...card} />, cards) }
       </div>
     )
