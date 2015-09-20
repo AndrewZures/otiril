@@ -6,8 +6,7 @@ const Column = require('./column.jsx');
 
 const columnTarget = {
   drop(props, monitor) {
-    const columnId = props.id
-    Store.dispatch(ActionCreators.changeColumn(monitor.getItem(), columnId));
+    Store.dispatch(ActionCreators.changeColumn(monitor.getItem(), props.id));
   }
 }
 
