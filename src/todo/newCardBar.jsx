@@ -18,6 +18,7 @@ class NewCardBar extends React.Component {
 
     if(this.state.currentTitle.length !== 0) {
       Store.dispatch(ActionCreators.addCard({ title: this.state.currentTitle}));
+      this.setState({ currentTitle: "" })
     }
   }
 
@@ -32,7 +33,7 @@ class NewCardBar extends React.Component {
             placeholder={this.props.defaultText.title}
             onChange={this.handleTitleChange.bind(this)}
           />
-          <button type="submit" className="newCardSubmit">Submit</button>
+          <button type="submit" className="newCardSubmit">Add Card</button>
         </div>
       </form>
     )
