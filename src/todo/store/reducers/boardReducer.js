@@ -1,4 +1,3 @@
-const Redux = require('redux');
 const ActionTypes = require('../actionTypes.js')
 
 function boardReducer(state = 0, action){

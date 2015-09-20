@@ -1,7 +1,5 @@
-const _ = require("ramda");
 const Redux = require('redux');
 const initialState = require('./initialState.js');
-const ActionTypes = require('./actionTypes.js');
 const ColumnReducer = require('./reducers/columnReducers.js');
 
 function appReducers(state, action) {
