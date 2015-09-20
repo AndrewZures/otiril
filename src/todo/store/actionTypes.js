@@ -1,6 +1,7 @@
 const ActionTypes = {
   board: {
-    addToWorkingColumn: 'ADD_TO_WORKING_COLUMN'
+    updateCardColumn: 'UPDATE_CARD_COLUMN',
+    addCard: 'ADD_NEW_CARD'
   }
 }
 

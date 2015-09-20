@@ -6,7 +6,7 @@ const Column = require('./column.jsx');
 
 const columnTarget = {
   drop(props, monitor) {
-    Store.dispatch(ActionCreators.changeColumn(monitor.getItem(), props.id));
+    Store.dispatch(ActionCreators.updateCardColumn(monitor.getItem(), props.id));
   }
 }
 

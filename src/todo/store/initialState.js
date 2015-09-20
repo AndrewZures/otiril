@@ -31,8 +31,16 @@ const initialState = function(){
     ]
   }
 
+  const newCard = {
+    defaultText: {
+      title: "Card Title"
+    },
+    currentTitle: ""
+  }
+
   const state = {
-    board: board
+    board: board,
+    newCard: newCard
   }
 
   return state;
