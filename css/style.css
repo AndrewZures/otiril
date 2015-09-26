@@ -33,6 +33,10 @@ body {
   float: right;
 }
 
+.card .modal {
+  float: right;
+}
+
 .card .content {
   float: left;
 }

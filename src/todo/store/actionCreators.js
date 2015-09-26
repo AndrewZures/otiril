@@ -2,6 +2,12 @@ const ActionTypes = require('./actionTypes.js')
 
 const actionCreators = {
 
+  closeModal: function() {
+    return {
+      type: ActionTypes.main.closeModal
+    }
+  },
+
   addCard: function(cardData) {
     return {
       type: ActionTypes.board.addCard,
@@ -13,6 +19,14 @@ const actionCreators = {
     return {
       type: ActionTypes.board.deleteCard,
       data: data
+    }
+  },
+
+  editCard: function(data) {
+    return {
+      type: ActionTypes.card.editCard,
+      showModal: true,
+      cardData: data
     }
   },
 

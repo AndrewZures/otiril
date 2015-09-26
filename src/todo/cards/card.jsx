@@ -4,20 +4,29 @@ const ActionCreators = require('../store/actionCreators.js');
 
 class Card extends React.Component {
 
-  deleteCardHandler(e) {
+  deleteCard(e) {
     Store.dispatch(ActionCreators.deleteCard(this.props));
+  }
+
+  editCard(e) {
+    Store.dispatch(ActionCreators.editCard(this.props));
   }
 
   render() {
     return(
       <div className="card">
-        <div>{this.props.title}</div>
         <button
           type="button"
           className="delete-button"
-          onClick={this.deleteCardHandler.bind(this)}>
-          X
+          onClick={this.deleteCard.bind(this)}>
+          Delete
         </button>
+        <div className="modal">
+          <button onClick={this.editCard.bind(this)}>Edit</button>
+        </div>
+
+        <div>{this.props.title}</div>
+        <p>{this.props.summary}</p>
       </div>
     )
   }

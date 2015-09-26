@@ -1,11 +1,13 @@
 const Redux = require('redux');
 const initialState = require('./initialState.js');
 const ColumnReducer = require('./reducers/columnReducers.js');
+const ModalReducer = require('./reducers/modalReducer.js');
 
 function appReducers(state, action) {
   return {
     board: boardReducers(state.board, action),
-    newCard: state.newCard
+    newCard: state.newCard,
+    modal: ModalReducer(state.modal, action)
   }
 }
 
