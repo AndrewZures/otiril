@@ -11,22 +11,15 @@ class CardModal extends React.Component {
 
   render() {
     return (
-      <div>
-        <Modal
-          isOpen={this.props.showModal}
+      <Modal
+        isOpen={this.props.showModal}
+        onRequestClose={this.closeModal.bind(this)}
         >
 
-          <h2>{this.props.cardData.title}</h2>
-          <button onClick={this.closeModal.bind(this)}>close</button>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </Modal>
-      </div>
+        <h2>{this.props.cardData.title}</h2>
+        <p>{this.props.cardData.summary}</p>
+        <button onClick={this.closeModal.bind(this)}>close</button>
+      </Modal>
     );
   }
 }
