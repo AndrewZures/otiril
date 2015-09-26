@@ -1,4 +1,5 @@
 const React = require('react');
+const DragTypes = require('../constants.js').DragTypes
 const Store = require('../store/store.js');
 const ActionCreators = require('../store/actionCreators.js');
 const DropTarget = require('react-dnd').DropTarget
@@ -42,4 +43,4 @@ class DropColumn extends React.Component {
   }
 }
 
-module.exports = DropTarget('hi', columnTarget, collect)(DropColumn);
+module.exports = DropTarget(DragTypes.basicCard, columnTarget, collect)(DropColumn);

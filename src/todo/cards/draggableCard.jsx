@@ -1,4 +1,5 @@
 const React = require('react');
+const DragTypes = require('../constants.js').DragTypes
 const DragSource = require('react-dnd').DragSource
 const Card = require('./card.jsx');
 
@@ -30,4 +31,4 @@ class DraggableCard extends React.Component {
   }
 }
 
-module.exports = DragSource('hi', cardSource, collect)(DraggableCard);
+module.exports = DragSource(DragTypes.basicCard, cardSource, collect)(DraggableCard);
