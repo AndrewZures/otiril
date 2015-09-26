@@ -23,6 +23,7 @@
     "css-loader": "^0.15.6",
     "extract-text-webpack-plugin": "^0.3.8",
     "flux": "^2.0.3",
+    "immutable": "^3.7.5",
     "jest": "^0.1.40",
     "jest-cli": "^0.4.18",
     "lodash": "^3.10.1",

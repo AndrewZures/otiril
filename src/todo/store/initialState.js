@@ -1,3 +1,5 @@
+const Immutable = require('immutable');
+
 const initialState = function(){
 
   const readyColumn = {

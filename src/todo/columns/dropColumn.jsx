@@ -25,7 +25,7 @@ class DropColumn extends React.Component {
 
     return connectDropTarget(
       <div className={ this.getStyle() }>
-        <Column cards={ this.props.cards } />
+        <Column {...this.props} />
       </div>
     )
   }

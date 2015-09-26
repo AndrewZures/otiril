@@ -26,7 +26,15 @@ body {
 }
 
 .card-drag {
-  opacity: 0.2;
+  opacity: 0.3;
+}
+
+.card .delete-button {
+  float: right;
+}
+
+.card .content {
+  float: left;
 }
 
 .active-drop .column {

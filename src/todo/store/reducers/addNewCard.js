@@ -6,9 +6,9 @@ const AddNewCard = function() {
 
   const addNewCard = function(columns, cardData) {
     const newCardData = buildNewCardData(cardData);
-    const readyColumn = _.find((column) => column.id === "ready", columns);
+    const readyColumn = columns.find((column) => column.id === "ready");
     readyColumn.cards.push(newCardData);
-
+    return columns;
   }
 
   const buildNewCardData = function(originalCardData) {

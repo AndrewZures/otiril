@@ -9,6 +9,13 @@ const actionCreators = {
     }
   },
 
+  deleteCard: function(data) {
+    return {
+      type: ActionTypes.board.deleteCard,
+      data: data
+    }
+  },
+
   updateCardColumn: function(card, columnId) {
     return {
       type: ActionTypes.board.updateCardColumn,
