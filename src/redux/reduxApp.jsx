@@ -11,7 +11,6 @@ class ReduxApp extends React.Component {
 
   componentDidMount() {
     Store.subscribe(() => this.setState(Store.getState()))
-    Store.subscribe(() => console.log(Store.getState()))
   }
 
   render(){

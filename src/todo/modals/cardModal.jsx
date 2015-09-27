@@ -4,7 +4,6 @@ const ActionCreators = require('../store/actionCreators.js');
 class CardModal extends React.Component {
 
   closeModal() {
-    console.log('here')
     this.props.store.dispatch(ActionCreators.closeModal())
   }
 
