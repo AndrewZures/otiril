@@ -25,8 +25,7 @@ const actionCreators = {
   editCard: function(data) {
     return {
       type: ActionTypes.card.editCard,
-      showModal: true,
-      cardData: data
+      data: data
     }
   },
 

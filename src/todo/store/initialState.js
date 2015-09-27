@@ -50,7 +50,8 @@ const initialState = function(){
 
   const modal = {
     showModal: false,
-    cardData: {}
+    data: {},
+    modalComponent: ""
   }
 
   const state = {

@@ -1,7 +1,7 @@
 const React = require('react');
 const NewCardBar = require('./newCardBar.jsx');
 const Board = require('./board.jsx');
-const CardModal = require('./modals/cardModal.jsx');
+const ModalContainer = require('./modals/modalContainer.jsx');
 
 class MainContent extends React.Component {
 
@@ -10,7 +10,7 @@ class MainContent extends React.Component {
       <div>
         <NewCardBar {...this.props.newCard} />
         <Board {...this.props.board} />
-        <CardModal {...this.props.modal} />
+        <ModalContainer {...this.props.modal} />
       </div>
     )
   }

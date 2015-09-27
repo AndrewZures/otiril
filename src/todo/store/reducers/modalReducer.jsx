@@ -1,5 +1,6 @@
 const _ = require("ramda");
 const Actions = require('../actionTypes.js');
+const CardModal = require('../../modals/cardModal.jsx');
 
 const ModalReducer = function() {
 
@@ -15,11 +16,15 @@ const ModalReducer = function() {
   }
 
   const closeModal = function(action) {
-    return { showModal: false, cardData: {} }
+    return { showModal: false,
+             data: {},
+             modalComponent: "" }
   }
 
   const showCardModal = function(action) {
-    return { showModal: action.showModal, cardData: action.cardData }
+    return { showModal: true,
+             data: action.data,
+             modalComponent: CardModal }
   }
 
   return modalReducer
