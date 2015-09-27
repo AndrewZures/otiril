@@ -1,6 +1,6 @@
 const _ = require("ramda");
-const Actions = require('../actionTypes.js');
-const CardModal = require('../../modals/cardModal.jsx');
+const Actions = require('../../actionTypes.js');
+const CardModal = require('../../../modals/cardModal.jsx');
 
 const ModalReducer = function() {
 

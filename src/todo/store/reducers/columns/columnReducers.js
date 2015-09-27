@@ -1,5 +1,5 @@
 const _ = require("ramda");
-const BoardActions = require('../actionTypes.js').board;
+const Actions = require('../../actionTypes.js');
 const AddNewCard = require('./addNewCard.js');
 const DeleteCard = require('./deleteCard.js');
 const UpdateCardColumn = require('./updateCardColumn.js');
@@ -8,11 +8,11 @@ const ColumnReducer = function() {
 
   const columnReducer = function(columns = [], action) {
     switch(action.type) {
-      case BoardActions.updateCardColumn:
+      case Actions.board.updateCardColumn:
         columns = UpdateCardColumn(columns, action.data); break;
-      case BoardActions.addCard:
+      case Actions.board.addCard:
         columns = AddNewCard(columns, action.data); break;
-      case BoardActions.deleteCard:
+      case Actions.board.deleteCard:
         columns = DeleteCard(columns, action.data); break;
     }
 

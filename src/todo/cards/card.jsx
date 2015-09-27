@@ -22,7 +22,9 @@ class Card extends React.Component {
           Delete
         </button>
         <div className="modal">
-          <button onClick={this.editCard.bind(this)}>Edit</button>
+          <button onClick={this.editCard.bind(this)}>
+            Edit
+          </button>
         </div>
 
         <div>{this.props.title}</div>
