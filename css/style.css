@@ -2,6 +2,24 @@
   height: 400px;
 }
 
+textarea.lock {
+  resize: none;
+}
+
+textarea:read-only {
+  color: grey;
+  border: none;
+}
+
+.cardModal button {
+  font-size: 12pt;
+}
+
+.summary {
+  width:80%;
+  height:150px;
+}
+
 .board {
   display: -webkit-flex;
   display: flex;
