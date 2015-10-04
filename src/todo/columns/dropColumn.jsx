@@ -8,6 +8,15 @@ const Column = require('./column.jsx');
 const columnTarget = {
   drop(props, monitor) {
     Store.dispatch(ActionCreators.board.updateCardColumn(monitor.getItem(), props.id));
+  },
+  hover(props, monitor) {
+    const { id: draggedId } = monitor.getItem();
+    const { id: overId } = props;
+
+    if(draggedId !== overId) {
+      // const { index: overIndex } = props.findCard(overId);
+      // props.moveCard(draggedId, overIndex);
+    }
   }
 }
 

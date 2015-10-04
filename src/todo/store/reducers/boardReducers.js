@@ -3,6 +3,7 @@ const Actions = require('../actionTypes.js');
 const AddCard = require('./board/addCard.js');
 const UpdateCard = require('./board/updateCard.js');
 const DeleteCard = require('./board/deleteCard.js');
+const MoveCardPosition = require('./board/moveCardPosition.js');
 const UpdateCardColumn = require('./board/updateCardColumn.js');
 
 const ColumnReducer = function() {
@@ -15,6 +16,8 @@ const ColumnReducer = function() {
         columns = DeleteCard(columns, action.data); break;
       case Actions.board.updateCardColumn:
         columns = UpdateCardColumn(columns, action.data); break;
+      case Actions.board.moveCardPosition:
+        columns = MoveCardPosition(columns, action); break
     }
 
     return columns;

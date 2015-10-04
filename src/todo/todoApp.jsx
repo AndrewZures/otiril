@@ -1,3 +1,4 @@
+window._ = require('ramda');
 const React = require('react');
 const Store = require('./store/store.js');
 const MainContent = require('./mainContent.jsx');

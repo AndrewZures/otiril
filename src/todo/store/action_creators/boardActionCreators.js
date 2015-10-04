@@ -37,9 +37,19 @@ const BoardActionCreators = {
         card: card
       }
     }
+  },
+
+  moveCardPosition: function(originalIndex, overIndex, columnId) {
+    return {
+      type: ActionTypes.board.moveCardPosition,
+      data: {
+        originalIndex: originalIndex,
+        overIndex: overIndex,
+        columnId: columnId
+      }
+    }
   }
 
 }
 
 module.exports = BoardActionCreators
-

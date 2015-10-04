@@ -60,13 +60,13 @@ button {
   float: left;
 }
 
-.active-drop .column {
-  background: #E9EBFF;
+.active-drop {
+  background: lightgrey;
 }
 
-.can-drop .column {
-  background: #9DA6FF;
-}
+/* .can-drop { */
+/*   background: lightgrey; */
+/* } */
 
 .column {
   margin: 10px;

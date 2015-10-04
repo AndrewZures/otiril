@@ -1,5 +1,5 @@
-const _ = require("ramda");
 const ActionTypes = require('../actionTypes.js');
+
 const NewModalReducer = require('./modal/newModalReducer.jsx');
 const ShowModalReducer = require('./modal/showModalReducer.jsx');
 const CloseModalReducer = require('./modal/closeModalReducer.jsx');
