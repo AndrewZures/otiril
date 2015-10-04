@@ -1,9 +1,9 @@
 const _ = require("ramda");
-const Actions = require('../../actionTypes.js');
-const AddCard = require('./addCard.js');
-const UpdateCard = require('./updateCard.js');
-const DeleteCard = require('./deleteCard.js');
-const UpdateCardColumn = require('./updateCardColumn.js');
+const Actions = require('../actionTypes.js');
+const AddCard = require('./board/addCard.js');
+const UpdateCard = require('./board/updateCard.js');
+const DeleteCard = require('./board/deleteCard.js');
+const UpdateCardColumn = require('./board/updateCardColumn.js');
 
 const ColumnReducer = function() {
 
