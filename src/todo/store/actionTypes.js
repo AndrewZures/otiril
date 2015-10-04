@@ -1,14 +1,16 @@
 const ActionTypes = {
-  main: {
-    closeModal: "CLOSE_MODAL"
-  },
-  card: {
-    editCard: 'EDIT_CARD'
+  modal: {
+    closeModal: "CLOSE_MODAL",
+    updateModal: "UPDATE_MODAL",
+    resetModal: "RESET_MODAL",
+    toggleEditable: "TOGGLE_EDITABLE"
   },
   board: {
-    addCard: 'ADD_CARD',
+    newCard: 'NEW_CARD',
+    editCard: 'EDIT_CARD',
     deleteCard: 'DELETE_CARD',
     updateCardColumn: 'UPDATE_CARD_COLUMN',
+    saveOrUpdateCard: 'SAVE_OR_UPDATE_CARD'
   }
 }
 

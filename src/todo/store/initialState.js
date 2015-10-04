@@ -50,7 +50,9 @@ const initialState = function(){
 
   const modal = {
     showModal: false,
+    editable: false,
     data: {},
+    presentedData: {},
     modalComponent: ""
   }
 

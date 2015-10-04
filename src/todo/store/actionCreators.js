@@ -1,43 +1,12 @@
 const ActionTypes = require('./actionTypes.js')
+const ModalActionCreators = require('./action_creators/modalActionCreators.js')
+const BoardActionCreators = require('./action_creators/boardActionCreators.js')
 
 const actionCreators = {
 
-  closeModal: function() {
-    return {
-      type: ActionTypes.main.closeModal
-    }
-  },
+  modal: ModalActionCreators,
+  board: BoardActionCreators
 
-  addCard: function(cardData) {
-    return {
-      type: ActionTypes.board.addCard,
-      data: cardData
-    }
-  },
-
-  deleteCard: function(data) {
-    return {
-      type: ActionTypes.board.deleteCard,
-      data: data
-    }
-  },
-
-  editCard: function(data) {
-    return {
-      type: ActionTypes.card.editCard,
-      data: data
-    }
-  },
-
-  updateCardColumn: function(card, columnId) {
-    return {
-      type: ActionTypes.board.updateCardColumn,
-      data: {
-        columnId: columnId,
-        card: card
-      }
-    };
-  }
 
 }
 

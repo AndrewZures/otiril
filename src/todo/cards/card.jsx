@@ -4,12 +4,12 @@ const ActionCreators = require('../store/actionCreators.js');
 
 class Card extends React.Component {
 
-  deleteCard(e) {
-    Store.dispatch(ActionCreators.deleteCard(this.props));
+  deleteCard() {
+    Store.dispatch(ActionCreators.board.deleteCard(this.props));
   }
 
-  editCard(e) {
-    Store.dispatch(ActionCreators.editCard(this.props));
+  editCard() {
+    Store.dispatch(ActionCreators.board.editCard(this.props));
   }
 
   render() {

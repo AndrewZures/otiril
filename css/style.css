@@ -6,7 +6,7 @@ textarea.lock {
   resize: none;
 }
 
-textarea:read-only {
+textarea:read-only, input:read-only {
   color: grey;
   border: none;
 }
