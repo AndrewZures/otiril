@@ -11,6 +11,7 @@ class App extends React.Component {
           <li><Link to="chess">Chess Game</Link></li>
           <li><Link to="redux">Redux Stuff</Link></li>
           <li><Link to="todo">Todo</Link></li>
+          <li><Link to="jest">Jest Sample</Link></li>
         </ul>
         <RouteHandler />
       </div>

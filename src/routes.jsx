@@ -6,12 +6,14 @@ const App      = require('./app.jsx');
 const ChessApp = require('./chess/chessApp.jsx');
 const ReduxApp = require('./redux/reduxApp.jsx');
 const TodoApp = require('./todo/todoApp.jsx');
+const JestApp = require('./jest/jestApp.jsx');
 
 const AppRoutes = (
   <Route name="app" path="/" handler={App} >
     <Route name="chess" handler={ChessApp} />
     <Route name="redux" handler={ReduxApp} />
     <Route name="todo" handler={TodoApp} />
+    <Route name="jest" handler={JestApp} />
     <DefaultRoute handler={ChessApp} />
   </Route>
 )

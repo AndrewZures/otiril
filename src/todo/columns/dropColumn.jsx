@@ -14,8 +14,7 @@ const columnTarget = {
     const { id: overId } = props;
 
     if(draggedId !== overId) {
-      // const { index: overIndex } = props.findCard(overId);
-      // props.moveCard(draggedId, overIndex);
+      Store.dispatch(ActionCreators.board.moveCardPosition(draggedId, overId, props.id));
     }
   }
 }
