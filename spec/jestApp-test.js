@@ -1,10 +1,10 @@
-jest.dontMock('../jestApp.jsx')
+jest.dontMock('../src/jest/jestApp.jsx')
 
 const React = require('react');
 const ReactDom = require('react-dom');
 const TestUtils = require('react-addons-test-utils');
 
-const CheckBoxWithLabel = require('../jestApp.jsx');
+const CheckBoxWithLabel = require('../src/jest/jestApp.jsx');
 
 describe('CheckBoxWithLabel', () => {
 
