@@ -1,4 +1,4 @@
-const { Link, RouteHandler } = require('react-router');
+const { Link } = require('react-router');
 
 class AppContainer extends React.Component {
 
