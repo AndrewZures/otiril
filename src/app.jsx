@@ -1,6 +1,4 @@
-const React = require('react');
-const Router = require('react-router');
-const { Link, RouteHandler } = Router
+const { Link, RouteHandler } = require('react-router');
 
 class App extends React.Component {
 

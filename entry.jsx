@@ -1,9 +1,11 @@
 require("./css/style.css")
 
-const React = require('react')
-const Router = require('react-router');
+window.React = require('react')
 
-const AppRoutes = require('./src/routes.jsx');
-const root  = window.document.querySelector('#app');
+const ReactDOM = require('react-dom');
+const Router = require('./src/Router.jsx');
 
-Router.run(AppRoutes, (Handler) => React.render(<Handler />, root));
+ReactDOM.render(
+  <Router />,
+  document.getElementById('app')
+);

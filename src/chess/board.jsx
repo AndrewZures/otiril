@@ -5,7 +5,7 @@ const DroppableSquare = require('./boardSquare.jsx');
 const Knight = require('./knight.jsx');
 const Game = require('./game.jsx');
 const DragDropContext = require('react-dnd').DragDropContext;
-const HTML5Backend = require('react-dnd/modules/backends/HTML5');
+const HTML5Backend = require('react-dnd-html5-backend');
 
 class Board extends React.Component {
 
