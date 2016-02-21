@@ -2,8 +2,8 @@ require("./css/style.css")
 
 window.React = require('react')
 
-const ReactDOM = require('react-dom');
-const Router = require('./src/Router');
+import ReactDOM from 'react-dom'
+import Router from './src/Router'
 
 ReactDOM.render(
   <Router />,

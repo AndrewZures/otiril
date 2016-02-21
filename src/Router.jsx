@@ -12,4 +12,4 @@ class AppRouter extends React.Component {
   }
 }
 
-module.exports = AppRouter;
+export default AppRouter
