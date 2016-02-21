@@ -1,4 +1,4 @@
-const { Link } = require('react-router');
+import { Link } from 'react-router'
 
 class AppContainer extends React.Component {
 
@@ -17,4 +17,4 @@ class AppContainer extends React.Component {
   }
 }
 
-module.exports = AppContainer;
+export default AppContainer

@@ -9,14 +9,23 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /(\.jsx$|\.js$)/,
+      {
+        test: /(\.jsx$|\.js$)/,
+        exclude: /node_modules/,
+        loader: 'imports',
+        query: {
+          React: 'react',
+          _: 'ramda'
+        }
+      },{
+        test: /(\.jsx$|\.js$)/,
         exclude: /node_modules/,
         loader: 'babel',
         query: {
           presets: ['react', 'es2015', 'stage-0']
         }
-      },
-      { test: /\.css$/,
+      },{
+        test: /\.css$/,
         loader: "style!css"
       }
     ]

@@ -1,5 +1,5 @@
-const { Router, Route, browserHistory } = require('react-router');
-const AppContainer = require('./AppContainer')
+import { Router, Route, browserHistory } from 'react-router'
+import AppContainer from './AppContainer'
 
 class AppRouter extends React.Component {
 

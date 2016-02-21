@@ -1,6 +1,4 @@
-require("./css/style.css")
-
-window.React = require('react')
+require('./css/style.css')
 
 import ReactDOM from 'react-dom'
 import Router from './src/Router'
