@@ -2,6 +2,10 @@ import { Link } from 'react-router'
 
 class AppContainer extends React.Component {
 
+  componentWillMount() {
+    console.log(this.props)
+  }
+
   render() {
     return(
       <div>
