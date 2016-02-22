@@ -2,8 +2,12 @@ import { Link } from 'react-router'
 
 class AppContainer extends React.Component {
 
+  static contextTypes = {
+    store: React.PropTypes.object
+  }
+
   componentWillMount() {
-    console.log(this.props)
+    this.setState({ store: this.context.store })
   }
 
   render() {
@@ -15,7 +19,6 @@ class AppContainer extends React.Component {
           <li><Link to="todo">Todo</Link></li>
           <li><Link to="jest">Jest Sample</Link></li>
         </ul>
-        {this.props.children}
       </div>
     )
   }
