@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import Transition from './Transition'
 
 class AppContainer extends React.Component {
 
@@ -25,21 +25,15 @@ class AppContainer extends React.Component {
   }
 
   render() {
-    const items = this.state.data.map((i, idx) => <li key={idx}>{i}</li>)
     return(
       <div>
         <button onClick={this.add.bind(this)}>Add</button>
         <button onClick={this.remove.bind(this)}>Remove</button>
         <div className="example">
           <ul key={12345}>
-            <ReactCSSTransitionGroup
-              transitionName="example"
-              transitionAppear={true}
-              transitionAppearTimeout={500}
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={300} >
-                {items}
-            </ReactCSSTransitionGroup>
+            <Transition>
+              {this.state.data.map((i, idx) => <li key={idx}>{i}</li>)}
+            </Transition>
           </ul>
         </div>
       </div>
