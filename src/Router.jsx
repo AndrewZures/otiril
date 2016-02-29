@@ -1,7 +1,9 @@
-import { Router, Route, browserHistory } from 'react-router'
-import AppContainer from './AppContainer'
-
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import store from './store/Store'
+
+import AppContainer from './AppContainer'
+import ListContainer from './components/list/ListContainer'
+import TransitionsContainer from './components/transitions/TransitionsContainer'
 
 class AppRouter extends React.Component {
 
@@ -18,7 +20,11 @@ class AppRouter extends React.Component {
   render() {
     return (
       <Router history={browserHistory}>
-        <Route path="/" component={AppContainer} />
+        <Route path="/" component={AppContainer} >
+          <Route path="list" component={ListContainer} />
+          <Route path="transitions" component={TransitionsContainer} />
+          <IndexRoute component={TransitionsContainer} />
+        </Route>
       </Router>
     )
   }

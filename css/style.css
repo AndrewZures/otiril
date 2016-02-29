@@ -93,6 +93,13 @@ button {
   font-size: 16pt;
 }
 
+.example:hover {
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
 .example-appear.example-appear-active {
   opacity: 1;
   transition: opacity .5s ease-in;
@@ -113,4 +120,37 @@ button {
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 130ms ease-in;
+}
+
+#delay1 {
+  position: relative;
+  transition-property: font-size;
+  transition-duration: 1s;
+  font-size: 14;
+}
+
+#delay1:hover {
+  position: relative;
+  transition-property: font-size;
+  transition-duration: 2s;
+  font-size: 36;
+}
+
+.box {
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000FF;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box:hover {
+  background-color: #FFCCCC;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
