@@ -12,9 +12,18 @@ class AppContainer extends React.Component {
 
   render() {
     return(
-      <div>
-        <Link to="/list">List</Link>
-        <Link to="/transitions">Transitions</Link>
+      <div className="main-container">
+        <div className="navbar">
+          <div className="left-links">
+            <Link className="navbar-item navbar-item-link" to="/list">List</Link>
+            <Link className="navbar-item navbar-item-link" to="/transitions">Transitions</Link>
+          </div>
+          <div className="right-menu">
+            <div className="navbar-item navbar-item-link">
+              <i className="fa fa-bars"></i>
+            </div>
+          </div>
+        </div>
         {this.props.children}
       </div>
     )

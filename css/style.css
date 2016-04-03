@@ -1,5 +1,10 @@
 #app {
   height: 400px;
+  display: flex;
+}
+
+body {
+  margin: 0 auto;
 }
 
 textarea.lock {
@@ -153,4 +158,37 @@ button {
   height: 200px;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* navbar stuff */
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 18;
+  background-color: #E8E8E8;
+}
+
+.left-links {
+  display: flex;
+}
+
+.navbar-item {
+  color: black;
+  padding: .5em 1em .5em 1em;
+  text-decoration: none;
+}
+
+.navbar-item-link:hover {
+  color: grey;
+  transition-duration: 0.5s;
 }
