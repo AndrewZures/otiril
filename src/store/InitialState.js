@@ -1,5 +1,5 @@
 const InitialState = {
-  menuVisible: false
+ menuVisible: true
 };
 
 export default InitialState

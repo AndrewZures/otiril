@@ -17,14 +17,18 @@ class Menu extends React.Component {
 
   renderMenu() {
     return (
-      <div>Menu Visible</div>
+      <div className="dropdown-content">
+        <div className="dropdown-item">Account</div>
+        <div className="dropdown-item">Social</div>
+        <div className="dropdown-item">Logout</div>
+      </div>
     )
   }
 
   render() {
     return (
       <div>
-        <i className="fa fa-bars" onClick={this.toggleMenu.bind(this)} />
+        <i className="dropdown fa fa-bars" onClick={this.toggleMenu.bind(this)} />
         {this.state.menuVisible ? this.renderMenu() : '' }
       </div>
     )

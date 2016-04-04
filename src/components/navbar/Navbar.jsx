@@ -9,11 +9,11 @@ class Navbar extends React.Component {
         <div className="left-links">
           <Link className="navbar-item navbar-item-link" to="/list">List</Link>
           <Link className="navbar-item navbar-item-link" to="/transitions">Transitions</Link>
-        </div>
-        <div className="right-menu">
           <div className="navbar-item navbar-item-link">
             <Menu {...this.props} />
           </div>
+        </div>
+        <div className="right-menu">
         </div>
       </div>
     )

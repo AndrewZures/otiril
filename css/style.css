@@ -192,3 +192,23 @@ button {
   color: grey;
   transition-duration: 0.5s;
 }
+
+.dropdown-content {
+  z-index: 1;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  position: absolute;
+  overflow: auto;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.dropdown-item {
+  padding: .5em 1em .5em 1em;
+  color: black;
+}
+
+.dropdown-item:hover {
+  color: grey;
+}
